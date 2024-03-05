@@ -4,7 +4,7 @@ import { FaGoogle, FaApple  } from 'react-icons/fa'
 const SignUp = () => {
   return (
      <div className='flex justify-center my-10 mt-[200px] w-auto'>
-        <div className='flex justify-center flex-col items-center w-auto h-[500px] border-2 border-[#e7e7e5] border-solid p-4 my-4 rounded-lg'>
+        <div className='flex justify-center flex-col items-center w-auto h-[400px] border-2 border-[#e7e7e5] border-solid p-4 my-4 rounded-lg'>
             <div className='text-center my-5'>
                 <h1 className='font-semibold'>Sign Up</h1>
             </div>
