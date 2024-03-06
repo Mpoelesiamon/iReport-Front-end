@@ -15,7 +15,7 @@ const NavBar = () => {
         <ul className='hidden md:flex cursor-pointer'>
           <li className='p-4'>Home</li>
           <li className='p-4'>Create Report</li>   
-          <li className='p-4'>About</li>
+          <li className='p-4'>About</li>  
           <li className='p-4'>Contact</li>
           <li className='p-4 px-12 font-bold'>Sign Up/Sign In</li>
         </ul>

@@ -12,7 +12,7 @@ const Authentication = () => {
   return (
     <div>
       {isSignUp ? <SignUp /> : <Login />}
-      <div className='text-center mt-4'>
+      <div className='text-center my-4'>
         {isSignUp ? (
           <p>Already have an account? <span className='text-[#f7bf0c] cursor-pointer mt-0' onClick={handleToggle}>Login</span></p>
         ) : (

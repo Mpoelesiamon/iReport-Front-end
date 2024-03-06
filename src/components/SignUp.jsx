@@ -28,7 +28,7 @@ const SignUp = () => {
                 <form className='flex justify-center items-center' action="">
                     <label>Email</label>
                     <input 
-                    className='border rounded mx-2'
+                    className='border rounded mx-2 mt-1'
                     type="email"
                     placeholder='Enter your email' 
                     required
