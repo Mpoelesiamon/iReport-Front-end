@@ -15,7 +15,7 @@ const NavBar = () => {
         <img className='h-[75px] w-[75px]' src="https://iili.io/JMy2FiF.png" alt="/" />
         <ul className='hidden md:flex cursor-pointer'>
           <NavLink to='/home'><li className='p-4'>Home</li></NavLink> 
-          <li className='p-4'>Create Report</li>  
+          <NavLink to='/report'><li className='p-4'>Create Report</li></NavLink>  
           <li className='p-4'>About</li>  
           <li className='p-4'>Contact</li>
           <NavLink to='/signup'><li className='p-4 px-12 font-bold'>Sign Up/Sign In</li></NavLink>
