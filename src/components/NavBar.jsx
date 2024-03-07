@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { NavLink } from "react-router-dom"
 
 const NavBar = () => {
     const [nav, setNav] = useState(false)
@@ -13,11 +14,11 @@ const NavBar = () => {
       <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4'>
         <img className='h-[75px] w-[75px]' src="https://iili.io/JMy2FiF.png" alt="/" />
         <ul className='hidden md:flex cursor-pointer'>
-          <li className='p-4'>Home</li>
-          <li className='p-4'>Create Report</li>   
+          <NavLink to='/home'><li className='p-4'>Home</li></NavLink> 
+          <li className='p-4'>Create Report</li>  
           <li className='p-4'>About</li>  
           <li className='p-4'>Contact</li>
-          <li className='p-4 px-12 font-bold'>Sign Up/Sign In</li>
+          <NavLink to='/signup'><li className='p-4 px-12 font-bold'>Sign Up/Sign In</li></NavLink>
         </ul>
         <div onClick={handleNav} className='cursor-pointer block md:hidden'>
           {nav ?  <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}  />}

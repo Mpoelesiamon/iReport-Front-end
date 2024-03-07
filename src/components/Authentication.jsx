@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SignUp from './SignUp';
 import Login from './Login';
+import NavBar from './NavBar';
 
 const Authentication = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -11,6 +12,7 @@ const Authentication = () => {
 
   return (
     <div>
+      <NavBar />
       {isSignUp ? <SignUp /> : <Login />}
       <div className='text-center my-4'>
         {isSignUp ? (
