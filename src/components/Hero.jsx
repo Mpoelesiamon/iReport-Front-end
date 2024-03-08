@@ -21,7 +21,7 @@ const Hero = () => {
                   /> 
               </div>
               <p className='md:text-2xl text-xl text-gray-500'>Find an issue, create a report.</p>
-              <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-500'>Get Started</button>
+              <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:scale-105 duration-500'>Get Started</button>
           </div>
       </div>
     </div>

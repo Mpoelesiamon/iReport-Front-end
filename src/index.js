@@ -7,12 +7,14 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Hero from './components/Hero';
 import Authentication from './components/Authentication';
 import Report from './components/Report';
+import RedFlag from './components/RedFlag';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
   {path: "/home", element: <Hero />},
   {path: "/signup", element: <Authentication />},
   {path: "/report", element: <Report />},
+  {path: "/red-flag", element: <RedFlag />},
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
