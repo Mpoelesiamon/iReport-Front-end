@@ -11,10 +11,10 @@ const Hero = () => {
               <p className='text-[#00df9a] font-bold p-2'></p>
               <h1 className='md:text-4xl sm:text-6xl text-4xl font-bold md:py-6 text-black'>Making Kenya a better place.</h1>
               <div className='flex justify-center items-center '>
-                  <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4 text-black'>Lorem ipsum for a</p>
+                  <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4 text-black'>Lorem ipsum for an</p>
                   <ReactTyped
                       className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2 text-[#f7bf0c]'
-                      strings={['input1', 'input2', 'input3']} 
+                      strings={['input 1', 'input 2', 'input 3']} 
                       typeSpeed={120} 
                       backspeed={130} 
                       loop

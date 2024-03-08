@@ -8,6 +8,9 @@ import Hero from './components/Hero';
 import Authentication from './components/Authentication';
 import Report from './components/Report';
 import RedFlag from './components/RedFlag';
+import Admin from './components/Admin'
+import Users from './components/Users'
+import ViewReport from './components/ViewReport';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -15,6 +18,10 @@ const router = createBrowserRouter([
   {path: "/signup", element: <Authentication />},
   {path: "/report", element: <Report />},
   {path: "/red-flag", element: <RedFlag />},
+  {path: "/admin", element: <Admin />},
+  {path: "/users", element: <Users />},
+  {path: "/viewReport", element: <ViewReport />}
+  
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
