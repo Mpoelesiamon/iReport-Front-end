@@ -6,7 +6,6 @@ import Authentication from "./components/Authentication";
 function App() {
   return (
     <div>
-      <NavBar />
       <Authentication />
     </div>
   );
