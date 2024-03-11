@@ -10,6 +10,10 @@ const Report = () => {
         navigate('/red-flag')
     }
 
+    const handleIntervention = () => {
+        navigate('/intervention')
+    }
+
   return (
     <div>
         <NavBar />
@@ -30,7 +34,7 @@ const Report = () => {
                     <p className='py-2 border-b mx-8'>Report it here</p>
                 </div>
                 <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 z-30 text-white relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-[#f7bf0c] after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all 
-                after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700'>Intervention report</button>
+                after:hover:duration-700 after:transition-all after:duration-700 transition-all duration-700' onClick={handleIntervention}>Intervention report</button>
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ import RedFlag from './components/RedFlag';
 import Admin from './components/Admin'
 import Users from './components/Users'
 import ViewReport from './components/ViewReport';
+import Intervention from './components/Intervention';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
   {path: "/red-flag", element: <RedFlag />},
   {path: "/admin", element: <Admin />},
   {path: "/users", element: <Users />},
-  {path: "/viewReport", element: <ViewReport />}
-  
+  {path: "/viewReport", element: <ViewReport />},
+  {path: "/intervention", element: <Intervention />}
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

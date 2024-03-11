@@ -4,7 +4,8 @@ import NavBar from './NavBar'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
-const RedFlag = () => {
+
+const Intervention = () => {
     const inputRef = useRef(null);
     const [image, setImage] = useState("");
 
@@ -27,7 +28,7 @@ const RedFlag = () => {
         <NavBar />
         <div className='flex justify-center items-center h-full'>
             <div className='w-[500px] shadow-xl flex flex-col p-4 my-4 rounded-[50px]'>
-                <p className='text-center font-semibold'>Red Flag Report</p>
+                <p className='text-center font-semibold'>Intervention Report</p>
                 <div className='flex justify-between mx-7'>
                     <div onClick={handleImageClick} className='bg-[#fff] h-[100px] w-[100px] mx-[30px] my-4 rounded-[5px] cursor-pointer'>
                         <div>
@@ -51,4 +52,4 @@ const RedFlag = () => {
   )
 }
 
-export default RedFlag
+export default Intervention
