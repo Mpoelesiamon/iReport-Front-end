@@ -18,10 +18,10 @@ export const Menudata = [
       icon: "fas fa-user"
     },
     {
-      title: "Settings",
+      title: "About",
       url: "/settings",
       cName: "nav-links",
-      icon: "fas fa-cog"
+      icon: "fas fa-info-circle"
     },
     {
       title: "Profile",

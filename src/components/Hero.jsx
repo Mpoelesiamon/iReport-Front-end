@@ -14,7 +14,7 @@ const Hero = () => {
                   <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4 text-black'>Lorem ipsum for an</p>
                   <ReactTyped
                       className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2 text-[#f7bf0c]'
-                      strings={['input 1', 'input 2', 'input 3']} 
+                      strings={['Spot it!', 'Report it!']} 
                       typeSpeed={120} 
                       backspeed={130} 
                       loop
