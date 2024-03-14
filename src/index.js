@@ -11,6 +11,9 @@ import RedFlag from './components/RedFlag';
 import Admin from './components/Admin';
 import ViewReport from './components/ViewReport';
 import Intervention from './components/Intervention';
+import Contact from './components/Contact';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -20,13 +23,15 @@ const router = createBrowserRouter([
   {path: "/red-flag", element: <RedFlag />},
   {path: "/admin", element: <Admin />},
   {path: "/viewReport", element: <ViewReport />},
-  {path: "/intervention", element: <Intervention />}
+  {path: "/intervention", element: <Intervention />},
+  {path: "/contact", element: <Contact />},
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer autoClose={2000} pauseOnHover={false} newestOnTop={false} pauseOnFocusLoss={false} />
   </React.StrictMode>
 );
 

@@ -46,7 +46,6 @@ const RedFlag = () => {
                 <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:scale-105 duration-500' onClick={buttonMessage}>Send report</button>
             </div>
         </div>
-        <ToastContainer />
     </div>
   )
 }
