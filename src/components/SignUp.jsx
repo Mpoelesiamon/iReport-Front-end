@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaGoogle, FaApple  } from 'react-icons/fa'
 
 const SignUp = () => {
   return (
@@ -55,13 +54,6 @@ const SignUp = () => {
             </div>
             <div>
                 <button className='bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-700'>Submit</button>
-            </div>
-            <div>
-                <h3>or login with:</h3>
-                <div className='flex justify-between'>
-                    <FaGoogle className='cursor-pointer'/>
-                    <FaApple className='cursor-pointer'/>
-                </div>
             </div>
         </div>
      </div>
