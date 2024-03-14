@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaGoogle, FaApple  } from 'react-icons/fa'
 
 const Login = () => {
   return (

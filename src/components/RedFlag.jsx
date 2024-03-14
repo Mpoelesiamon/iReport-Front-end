@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRef, useState } from 'react'
 import NavBar from './NavBar'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const RedFlag = () => {
