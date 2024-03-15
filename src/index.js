@@ -14,6 +14,7 @@ import Intervention from './components/Intervention';
 import Contact from './components/Contact';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import Verification from './components/Verification';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
   {path: "/viewReport", element: <ViewReport />},
   {path: "/intervention", element: <Intervention />},
   {path: "/contact", element: <Contact />},
+  {path: "/verification", element: <Verification />},
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

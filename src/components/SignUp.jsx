@@ -1,6 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 const SignUp = () => {
+    const navigate = useNavigate();
+
+    const handleSubmitClick = () => {
+        navigate('/verification')
+    }
+
   return (
      <div className='flex justify-center my-10 mt-[200px] w-auto'>
         <div className='flex justify-center flex-col items-center w-auto h-[400px] border-2 border-[#e7e7e5] border-solid p-4 my-4 rounded-lg'>
@@ -53,7 +60,7 @@ const SignUp = () => {
                 </form>
             </div>
             <div>
-                <button className='bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-700'>Submit</button>
+                <button onClick={handleSubmitClick} className='bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-700'>Submit</button>
             </div>
         </div>
      </div>
