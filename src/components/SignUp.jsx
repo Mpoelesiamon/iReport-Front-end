@@ -1,70 +1,36 @@
-import React from 'react'
-import { useNavigate } from 'react-router'
+// SignUp.jsx
+
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const SignUp = () => {
-    const navigate = useNavigate();
+    const [selectedRole, setSelectedRole] = useState('');
+    const history = useHistory();
 
-    const handleSubmitClick = () => {
-        navigate('/verification')
-    }
+    const handleSignUp = () => {
+        // Perform signup logic here...
+        // Once signed up, redirect users based on the selected role
+        switch (selectedRole) {
+            case 'firstAdmin':
+                history.push('/first-admin-dashboard');
+                break;
+            default:
+                history.push('/regular-user-dashboard');
+                break;
+        }
+    };
 
-  return (
-     <div className='flex justify-center my-10 mt-[200px] w-auto'>
-        <div className='flex justify-center flex-col items-center w-auto h-[400px] border-2 border-[#e7e7e5] border-solid p-4 my-4 rounded-lg'>
-            <div className='text-center my-5'>
-                <h1 className='font-semibold'>Sign Up</h1>
-            </div>
-            <div>
-                <form className='flex justify-center items-center' action="">
-                    <label>First Name</label>
-                    <input 
-                    className='border rounded mx-2 mt-1'
-                    type="text"
-                    placeholder='Enter your first name' 
-                    />
-                </form>
-                <form className='flex justify-center items-center' action="">
-                    <label>Last Name</label>
-                    <input 
-                    className='border rounded mx-2 mt-1'
-                    type="text"
-                    placeholder='Enter your last name' 
-                    />
-                </form>
-                <form className='flex justify-center items-center' action="">
-                    <label>Email</label>
-                    <input 
-                    className='border rounded mx-2 mt-1'
-                    type="email"
-                    placeholder='Enter your email' 
-                    required
-                    />
-                </form>
-                <form className='flex justify-center items-center' action="">
-                    <label>Password</label>
-                    <input 
-                    className='border rounded mx-2 mt-1'
-                    type="password"
-                    placeholder='Enter a password' 
-                    required
-                    />
-                </form>
-                <form className='flex justify-center items-center'>
-                    <label>Confirm Password</label>
-                    <input 
-                    className='border rounded mx-2 mt-1'
-                    type="password"
-                    placeholder='Confirm your password' 
-                    required
-                    />
-                </form>
-            </div>
-            <div>
-                <button onClick={handleSubmitClick} className='bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-700'>Submit</button>
-            </div>
+    return (
+        <div>
+            {/* Signup form with role selection */}
+            <select value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)}>
+                <option value="">Select Role</option>
+                <option value="firstAdmin">First Admin</option>
+                {/* Add other role options here if needed */}
+            </select>
+            <button onClick={handleSignUp}>Sign Up</button>
         </div>
-     </div>
-  )
-}
+    );
+};
 
-export default SignUp
+export default SignUp;

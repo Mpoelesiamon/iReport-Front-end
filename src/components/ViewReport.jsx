@@ -1,46 +1,42 @@
-import React from 'react'
-import { useRef, useState } from 'react'
-import NavBar from './NavBar'
+import React, { useState } from 'react';
+import NavBar from './NavBar';
 
-const RedFlag = () => {
-    const inputRef = useRef(null);
-    const [image, setImage] = useState("");
+const Admin = () => {
+    const [reports] = useState([
+        { id: 1, title: 'Report 1', description: 'Description of Report 1' }
+    ]);
 
-    const handleImageClick = () =>{
-        inputRef.current.click();
-    }
-    
-    const handleImageChange = (event) =>{
-        const file = event.target.files[0];
-        console.log(file);
-        setImage(event.target.files[0])
-    }
+    const handleAdminReply = (reply) => {
+        console.log('Admin replied:', reply);
+    };
 
-  return (
-    <div className=''>
-        <NavBar />
-        <div className='flex justify-center items-center h-full'>
-            <div className='w-[500px] shadow-xl flex flex-col p-4 my-4 rounded-[50px]'>
-                <div className='flex justify-between mx-7'>
-                    <div onClick={handleImageClick} className='bg-[#fff] h-[100px] w-[100px] mx-[30px] my-4 rounded-[5px] cursor-pointer'>
-                        <div>
-                            {image ? (
-                            <img className='w-screen' src={URL.createObjectURL(image)} alt="/"/>
-                            ) : (
-                            <img className='' src="https://iili.io/JVksC6Q.png" alt="/" />
-                            )}
+    return (
+        <div>
+            <NavBar />
+            <div className='text-white'>
+                <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
+                    <h1 className='md:text-4xl sm:text-6xl text-4xl font-bold md:py-6 text-black'>Past Reported Claim</h1>
+                    {reports.map((report) => (
+                        <div key={report.id} className="my-4 p-4 border border-gray-300 rounded-lg">
+                            <h2 className="text-xl font-bold">{report.title}</h2>
+                            <p className="text-gray-600">{report.description}</p>
+                            <div className="mt-2">
+                                <button className="mr-2 bg-green-500 text-white py-2 px-4 rounded-md" onClick={() => handleAdminReply('Report under investigation')}>
+                                    Report under investigation
+                                </button>
+                                <button className="mr-2 bg-red-500 text-white py-2 px-4 rounded-md" onClick={() => handleAdminReply('Report Rejected')}>
+                                    Report Rejected
+                                </button>
+                                <button className="bg-yellow-500 text-white py-2 px-4 rounded-md" onClick={() => handleAdminReply('Report Resolved')}>
+                                    Report Resolved
+                                </button>
+                            </div>
                         </div>
-                        <input type="file" ref={inputRef} onChange={handleImageChange} className='hidden'/>
-                    </div>
-                    <div className='bg-[#7dcdff] h-[100px] w-[100px] p-4 mx-[30px] my-4 rounded-[50px]'>
-                    </div>
+                    ))}
                 </div>
-                <textarea className='bg-[#e7e7e5] h-[100px] mt-5' placeholder='Add your report message here, be as detailed as possible'/>
-                <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:scale-105 duration-500'>Send report</button>
             </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default RedFlag
+export default Admin;

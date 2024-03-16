@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import Authentication from './components/Authentication';
 import Report from './components/Report';
 import RedFlag from './components/RedFlag';
-import Admin from './components/Admin';
+import Admin from './components/AdminDashboard';
 import ViewReport from './components/ViewReport';
 import Intervention from './components/Intervention';
 import Contact from './components/Contact';
