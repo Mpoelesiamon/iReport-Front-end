@@ -1,32 +1,38 @@
-// Login.jsx
-
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react'
 
 const Login = () => {
-    const history = useHistory();
-
-    const handleLogin = () => {
-        // Perform login logic here...
-        // Assuming the user's role is determined after login
-        const userRole = 'firstAdmin'; // Replace with actual role
-
-        switch (userRole) {
-            case 'firstAdmin':
-                history.push('/first-admin-dashboard');
-                break;
-            default:
-                history.push('/regular-user-dashboard');
-                break;
-        }
-    };
-
-    return (
-        <div>
-            {/* Login form */}
-            <button onClick={handleLogin}>Login</button>
+  return (
+     <div className='flex justify-center my-10 mt-[120px] w-auto'>
+        <div className='flex justify-center flex-col items-center w-auto h-[300px] border-2 border-[#e7e7e5] border-solid p-4 my-4 rounded-lg'>
+            <div className='text-center my-5'>
+                <h1 className='font-semibold'>Login</h1>
+            </div>
+            <div>
+                <form className='flex justify-center items-center' action="">
+                    <label>Email</label>
+                    <input 
+                    className='border rounded mx-2'
+                    type="email"
+                    placeholder='Enter your email' 
+                    required
+                    />
+                </form>
+                <form className='flex justify-center items-center' action="">
+                    <label>Password</label>
+                    <input 
+                    className='border rounded mx-2 mt-1'
+                    type="password"
+                    placeholder='Enter a password' 
+                    required
+                    />
+                </form>
+            </div>
+            <div>
+                <button className='bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:scale-105 duration-700'>Submit</button>
+            </div>
         </div>
-    );
-};
+     </div>
+  )
+}
 
-export default Login;
+export default Login
