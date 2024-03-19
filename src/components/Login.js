@@ -70,11 +70,13 @@
           </div>
           <div>
             <form className='flex justify-center items-center' action="">
-              <label>Email</label>
+              <label>Username</label>
               <input 
                 className='border rounded mx-2'
-                type="email"
-                placeholder='Enter your email' 
+                type="text"
+                placeholder='Enter your username' 
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
               />
             </form>
@@ -83,7 +85,9 @@
               <input 
                 className='border rounded mx-2 mt-1'
                 type="password"
-                placeholder='Enter a password' 
+                placeholder='Enter a password'
+                value={password}
+                 onChange={(e) => setPassword(e.target.value)} 
                 required
               />
             </form>

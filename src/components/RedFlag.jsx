@@ -39,8 +39,6 @@ const RedFlag = () => {
                         </div>
                         <input type="file" ref={inputRef} onChange={handleImageChange} className='hidden'/>
                     </div>
-                    <div className='bg-[#7dcdff] h-[100px] w-[100px] p-4 mx-[30px] my-4 rounded-[50px]'>
-                    </div>
                 </div>
                 <textarea className='bg-[#e7e7e5] h-[100px] mt-5' placeholder='Add your report message here, be as detailed as possible'/>
                 <button className='bg-[#2195f1] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white hover:scale-105 duration-500' onClick={buttonMessage}>Send report</button>
