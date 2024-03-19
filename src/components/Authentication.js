@@ -8,7 +8,7 @@ const Authentication = () => {
 
   const handleToggle = () => {
     setIsSignUp(!isSignUp);
-  };
+  };    
 
   return (
     <div>
