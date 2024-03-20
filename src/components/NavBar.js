@@ -16,7 +16,7 @@ const NavBar = () => {
           <ul className='hidden md:flex cursor-pointer'>
             <NavLink to='/home'><li className='p-4'>Home</li></NavLink> 
             <NavLink to='/report'><li className='p-4'>Create Report</li></NavLink>  
-            <li className='p-4'>About</li>  
+            <NavLink to='/about'><li className='p-4'>About</li></NavLink>
             <NavLink to='/contact'><li className='p-4'>Contact</li></NavLink>
             <NavLink to='/signup'><li className='p-4 px-12 font-bold'>Sign Up/Sign In</li></NavLink>
             <NavLink to='/users'><li className='p-4'>My Profile</li></NavLink>
@@ -29,7 +29,7 @@ const NavBar = () => {
             <ul className='pt-12 uppercase p-4 '>
               <NavLink to='/home'><li className='p-4 border-gray-700'>Home</li></NavLink>
               <NavLink to='/report'><li className='p-4 border-gray-700'>Create Report</li></NavLink>   
-              <li className='p-4 border-gray-700'>About</li>
+              <NavLink to='/about'><li className='p-4 border-gray-700'>About</li></NavLink> 
               <NavLink to='/contact'><li className='p-4 border-gray-700'>Contact</li></NavLink>
               <NavLink to='/signup'><li className='p-4 py-12 font-bold'>Sign Up/Sign In</li></NavLink>
               <NavLink to='/users'><li className='p-4 border-gray-700'>My Profile</li></NavLink>
