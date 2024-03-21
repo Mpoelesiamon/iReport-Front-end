@@ -3,11 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Hero from './components/Hero';
+import Authentication from './components/Authentication';
+import Report from './components/Report';
+import RedFlag from './components/RedFlag';
+import Admin from './components/AdminDashboard';
+import ViewReport from './components/ViewReport';
+import Intervention from './components/Intervention';
+import Contact from './components/Contact';
+import { ToastContainer } from 'react-toastify';
+import About from './components/About';
+import 'react-toastify/dist/ReactToastify.css';
+
+const router = createBrowserRouter([
+  {path: "/", element: <App />},
+  {path: "/home", element: <Hero />},
+  {path: "/signup", element: <Authentication />},
+  {path: "/report", element: <Report />},
+  {path: "/red-flag", element: <RedFlag />},
+  {path: "/admin", element: <Admin />},
+  {path: "/viewReport", element: <ViewReport />},
+  {path: "/intervention", element: <Intervention />},
+  {path: "/contact", element: <Contact />},
+  {path: "/about", element: <About />},
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
+    <ToastContainer autoClose={2000} pauseOnHover={false} newestOnTop={false} pauseOnFocusLoss={false} />
   </React.StrictMode>
 );
 

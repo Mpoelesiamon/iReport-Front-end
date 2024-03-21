@@ -1,15 +1,11 @@
 import React from "react";
 import './App.css'
-import NavBar from "./components/NavBar";
-import SignUp from "./components/SignUp";
-import Admin from "./components/Admin";
+import Authentication from "./components/Authentication";
 
 function App() {
   return (
     <div>
-      <NavBar />
-      <SignUp />
-      <Admin/>
+      <Authentication />
     </div>
   );
 }
