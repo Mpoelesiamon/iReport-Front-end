@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 
 const RedFlag = () => {
     const inputRef = useRef(null);
-    const videoInputRef = useRef(null); // Ref for video input
+    const videoInputRef = useRef(null); 
     const [formData, setFormData] = useState({
         description: '',
         videos: null,
@@ -16,7 +16,7 @@ const RedFlag = () => {
         inputRef.current.click();
     }
 
-    const handleVideoClick = () => { // Function to trigger video input click
+    const handleVideoClick = () => { 
         videoInputRef.current.click();
     }
     
@@ -28,7 +28,7 @@ const RedFlag = () => {
         });
     }
 
-    const handleVideoChange = (event) => { // Function to handle video file change
+    const handleVideoChange = (event) => { 
         const file = event.target.files[0];
         setFormData({
             ...formData,
@@ -48,7 +48,7 @@ const RedFlag = () => {
         const formDataToSend = new FormData();
         formDataToSend.append('description', formData.description);
         formDataToSend.append('image', formData.image);
-        formDataToSend.append('videos', formData.videos); // Append video file
+        formDataToSend.append('videos', formData.videos); 
         
         fetch('http://127.0.0.1:5555/redflags', {
             method: 'POST',
@@ -80,7 +80,6 @@ const RedFlag = () => {
         })
         .catch(error => {
             console.error('There was a problem with your fetch operation:', error);
-            // Handle error here
         });
     }
 

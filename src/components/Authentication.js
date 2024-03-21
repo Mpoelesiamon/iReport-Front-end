@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 
 const Authentication = () => {
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleToggle = () => {
     setIsSignUp(!isSignUp);
@@ -12,7 +13,7 @@ const Authentication = () => {
 
   return (
     <div>
-      <NavBar />
+      {isLoggedIn && <NavBar />}
       {isSignUp ? <SignUp /> : <Login />}
       <div className='text-center my-4'>
         {isSignUp ? (

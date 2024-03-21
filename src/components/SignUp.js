@@ -71,31 +71,37 @@ const SignUp = () => {
   if (emailVerification) {
     return (
       <div className="center-screen">
-        <div className="email-verification-page">
-          <div>{`Email sent to ${emailVerification.email}. Check your inbox for OTP.`}</div>
-          <h2>Enter OTP</h2>
-          <form onSubmit={handleVerifyClick}>
-            <label htmlFor="otp">OTP:</label>
-            <input
-              type="text"
-              id="otp"
-              name="otp"
-              value={formData.otp}
-              onChange={handleInputChange}
-              required
-            />
-            <input
-              type="hidden"
-              id="email"
-              name="email"
-              value={emailVerification.email}
-            />
-            <button type="submit">Verify Me</button>
-          </form>
-        </div>
+      <div className="email-verification-page flex justify-center items-center flex-col">
+        <div className="mb-4">{`Email sent to ${emailVerification.email}. Check your inbox for OTP.`}</div>
+        <h2 className="font-semibold">Enter OTP</h2>
+        <form className="flex flex-col items-center" onSubmit={handleVerifyClick}>
+          <label htmlFor="otp" className="mt-4">OTP:</label>
+          <input
+            type="text"
+            id="otp"
+            name="otp"
+            value={formData.otp}
+            onChange={handleInputChange}
+            className="border rounded mt-1 px-2 py-1"
+            required
+          />
+          <input
+            type="hidden"
+            id="email"
+            name="email"
+            value={emailVerification.email}
+          />
+          <button
+            type="submit"
+            className="bg-[#f7bf0c] w-[200px] rounded-md font-medium my-6 py-3 text-black hover:scale-105 duration-700"
+          >
+            Verify Me
+          </button>
+        </form>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
   return (
     <div className='flex justify-center my-10 mt-[200px] w-auto'>

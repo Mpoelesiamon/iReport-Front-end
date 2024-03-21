@@ -18,7 +18,7 @@ const NavBar = () => {
             <NavLink to='/report'><li className='p-4'>Create Report</li></NavLink>  
             <NavLink to='/about'><li className='p-4'>About</li></NavLink>
             <NavLink to='/contact'><li className='p-4'>Contact</li></NavLink>
-            <NavLink to='/signup'><li className='p-4 px-12 font-bold'>Sign Up/Sign In</li></NavLink>
+            <NavLink to='/signup'><li className='p-4 px-12 font-bold'>Sign Out</li></NavLink>
           </ul>
           <div onClick={handleNav} className='cursor-pointer block md:hidden'>
             {nav ?  <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}  />}
@@ -30,7 +30,7 @@ const NavBar = () => {
               <NavLink to='/report'><li className='p-4 border-gray-700'>Create Report</li></NavLink>   
               <NavLink to='/about'><li className='p-4 border-gray-700'>About</li></NavLink> 
               <NavLink to='/contact'><li className='p-4 border-gray-700'>Contact</li></NavLink>
-              <NavLink to='/signup'><li className='p-4 py-12 font-bold'>Sign Up/Sign In</li></NavLink>
+              <NavLink to='/signup'><li className='p-4 py-12 font-bold'>Sign Out</li></NavLink>
             </ul>
           </div>
         </div>
