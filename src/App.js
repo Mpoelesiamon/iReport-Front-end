@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css'
-import Hero from "./components/Hero";
+import Authentication from "./components/Authentication";
 
 function App() {
   return (
     <div>
-      <Hero />
+      <Authentication />
     </div>
   );
 }
