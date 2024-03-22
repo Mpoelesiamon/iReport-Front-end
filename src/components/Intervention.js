@@ -50,7 +50,7 @@ const RedFlag = () => {
         formDataToSend.append('image', formData.image);
         formDataToSend.append('videos', formData.videos); // Append video file
         
-        fetch('http://127.0.0.1:5555/interventions', {
+        fetch('https://ireporter-backend-cx0q.onrender.com/interventions', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('jwt')}`
