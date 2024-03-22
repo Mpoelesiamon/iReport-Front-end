@@ -13,7 +13,7 @@ const SignUp = () => {
   });
 
   const handleSubmitClick = () => {
-    fetch('http://127.0.0.1:5555/signup', {
+    fetch('https://ireporter-backend-cx0q.onrender.com/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ const SignUp = () => {
     //   return;
     // }
 
-    fetch('http://127.0.0.1:5555/verify', {
+    fetch('https://ireporter-backend-cx0q.onrender.com/verify', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
